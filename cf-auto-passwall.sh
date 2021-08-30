@@ -22,14 +22,12 @@ red(){
 clear
 green "=========================================================="
  blue "用途：用于自动筛选 CF IP，并自动替换优选 IP 为 PassWall 的节点地址"
- blue "网站： www.v2rayssr.com （已开启禁止国内访问）"
- blue "YouTube频道：波仔分享"
  blue "本脚本感谢 GitHub：Lbingyi 以及 Paniy"
  blue "本教程视频演示地址：https://youtu.be/WzRHi9f9QKg"
 green "=========================================================="
 green "=========================================================="
  red  "请在脚本中修改你期望优选 IP 的带宽大小（默认50M）脚本自动运行中....."
- red  "脚本第42行 bandwidth 后面的数值为期望优选带宽大小（ Mbps ）  "
+ red  "脚本第40行 bandwidth 后面的数值为期望优选带宽大小（ Mbps ）  "
 green "=================脚本正在运行中.....======================="
 sleep 8s
 /etc/init.d/haproxy stop
@@ -97,7 +95,7 @@ do
 		file=$(cat data.txt | grep file= | cut -f 2- -d'=')
 		url=$(cat data.txt | grep url= | cut -f 2- -d'=')
 		app=$(cat data.txt | grep app= | cut -f 2- -d'=')
-		if [ "$app" != "20210315" ]
+		if [ "$app" == "20210315" ]
 		then
 			echo 发现新版本程序: $app
 			echo 更新地址: $url
