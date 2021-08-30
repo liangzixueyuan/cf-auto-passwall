@@ -31,3 +31,4 @@ YouTube频道：波仔分享
 
 3、不会请看博客 https://www.v2rayssr.com/cf-auto-passwall.html
 
+## 已去掉更新提示
